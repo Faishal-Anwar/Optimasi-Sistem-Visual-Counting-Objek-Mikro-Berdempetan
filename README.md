@@ -1,4 +1,4 @@
-# OPTIMASI SISTEM VISUAL COUNTING OBJEK MIKRO BERDEMPETAN MENGGUNAKAN ARSITEKTUR YOLO-OBB DAN DETEKSI RESOLUSI TINGGI BERBASIS ONNX
+<img width="559" height="352" alt="Gambar_3_2_Desain_Eksperimen" src="https://github.com/user-attachments/assets/7b9c06a3-53b9-4636-91b7-f65caabce3de" /># OPTIMASI SISTEM VISUAL COUNTING OBJEK MIKRO BERDEMPETAN MENGGUNAKAN ARSITEKTUR YOLO-OBB DAN DETEKSI RESOLUSI TINGGI BERBASIS ONNX
 
 **LAPORAN TUGAS AKHIR**
 
@@ -319,7 +319,8 @@ Berdasarkan tinjauan pustaka di atas, dapat diidentifikasi bahwa belum ada studi
 - **Akurasi lokalisasi:** Representasi geometri yang lebih presisi meningkatkan kualitas deteksi secara keseluruhan.
 
 
-[*** LETAKKAN GAMBAR 2.1 ILUSTRASI PERBANDINGAN HBB VS OBB DI SINI ***]
+<img width="2961" height="1585" alt="Gambar_2_1_HBB_vs_OBB" src="https://github.com/user-attachments/assets/995cb339-4f0d-4bae-b510-cd44fae0d8c7" />
+
 
 
 #### 2.2.3 Arsitektur YOLO (You Only Look Once)
@@ -347,7 +348,7 @@ Konsekuensi dari modifikasi ini adalah pengurangan jumlah total parameter karena
 
 
 
-[*** LETAKKAN GAMBAR 2.2 ARSITEKTUR YOLO11 STANDAR VS MODIFIKASI P2 DI SINI ***]
+<img width="951" height="345" alt="Gambar_2_2_Arsitektur_P2" src="https://github.com/user-attachments/assets/66e4cbf3-8eb0-4574-9ba9-be166d94bd4f" />
 
 
 #### 2.2.5 Open Neural Network Exchange (ONNX)
@@ -413,7 +414,8 @@ Penelitian ini menggunakan pendekatan eksperimental komparatif dengan melakukan 
 
 
 
-[*** LETAKKAN GAMBAR 3.2 DESAIN EKSPERIMEN PENELITIAN DI SINI ***]
+<img width="559" height="352" alt="Gambar_3_2_Desain_Eksperimen" src="https://github.com/user-attachments/assets/59246932-50ec-4eba-941d-1887c485757c" />
+
 
 
 ### 3.2 Dataset dan Pengumpulan Data
@@ -426,7 +428,8 @@ Dataset yang digunakan dalam penelitian ini terdiri dari **1.000 citra** kompone
 
 
 
-[*** LETAKKAN GAMBAR 3.3 CONTOH CITRA DATASET DARI LINI PRODUKSI DI SINI ***]
+<img width="1024" height="768" alt="IMG_20260602_110831_325" src="https://github.com/user-attachments/assets/91ae4310-fb9c-437d-929b-f31bf670eaf2" />
+
 
 
 #### 3.2.2 Anotasi Dataset
@@ -437,7 +440,8 @@ Anotasi dilakukan secara manual menggunakan format *Oriented Bounding Box* (OBB)
 
 
 
-[*** LETAKKAN GAMBAR 3.4 CONTOH PROSES ANOTASI DENGAN FORMAT OBB DI SINI ***]
+<img width="868" height="653" alt="image" src="https://github.com/user-attachments/assets/d53dea9c-91f9-47d1-aa4d-6dc0397eebe2" />
+
 
 
 #### 3.2.3 Pembagian Dataset
@@ -472,7 +476,7 @@ Prosedur penelitian dilaksanakan melalui tahapan berikut:
 
 
 
-[*** LETAKKAN GAMBAR 3.1 DIAGRAM ALUR PENELITIAN DI SINI ***]
+<img width="403" height="768" alt="Gambar_3_1_Flowchart" src="https://github.com/user-attachments/assets/1921d259-5c44-4dd2-a5cd-1b6601e54d0d" />
 
 
 ### 3.4 Model yang Dibandingkan
@@ -569,7 +573,7 @@ Dari Tabel 4.1 dapat diamati bahwa:
 
 
 
-[*** LETAKKAN GAMBAR 4.1 KURVA LOSS TRAINING DI SINI ***]
+![Uploading loss_curves_comparison.png…]()
 
 
 ### 4.2 Evaluasi Deteksi pada Test Set
@@ -600,11 +604,14 @@ Evaluasi dilakukan pada 100 citra *test set* yang tidak pernah dilihat selama pe
 4. **F1-Score:** Konsisten dengan metrik lainnya, model-model OBB memiliki F1-Score ≥0,9985, sedangkan HBB sebesar 0,9978.
 
 
-[*** LETAKKAN GAMBAR 4.2 KURVA F1-SCORE DAN PR-CURVE DI SINI ***]
+ <img width="4152" height="2053" alt="precision_recall_f1" src="https://github.com/user-attachments/assets/af67787a-4e47-4027-9459-7b715b5d51f9" />
 
-[*** LETAKKAN GAMBAR 4.3 PERBANDINGAN METRIK DETEKSI (mAP) DI SINI ***]
 
-[*** LETAKKAN GAMBAR 4.4 RADAR CHART EVALUASI KOMPREHENSIF DI SINI ***]
+<img width="2345" height="1358" alt="Gambar_4_2_mAP" src="https://github.com/user-attachments/assets/c6dac4ae-6ceb-4878-b49b-4cf50d66cb63" />
+
+
+<img width="2555" height="2161" alt="Gambar_4_3_Radar" src="https://github.com/user-attachments/assets/f29dd6ce-6706-42dd-9c0a-2449a41ed96a" />
+
 
 
 ### 4.3 Evaluasi Visual Counting
@@ -633,7 +640,8 @@ Tabel 4.3 menyajikan hasil evaluasi kemampuan *visual counting* seluruh model pa
 
 
 
-[*** LETAKKAN GAMBAR 4.5 PERBANDINGAN METRIK COUNTING (MAE & ACCURACY) DI SINI ***]
+<img width="2555" height="2161" alt="Gambar_4_3_Radar" src="https://github.com/user-attachments/assets/e43ebce7-987f-4116-9e84-3b5b8a338006" />
+
 
 [*** LETAKKAN GAMBAR 4.6 SCATTER PLOT GROUND TRUTH VS PREDIKSI DI SINI ***]
 
