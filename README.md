@@ -397,10 +397,8 @@ Penelitian ini menggunakan pendekatan eksperimental komparatif dengan melakukan 
 3. **Evaluasi komprehensif** menggunakan metrik deteksi dan metrik *counting* pada *test set* yang identik.
 4. **Analisis komparatif** terhadap aspek akurasi, efisiensi parameter, dan kecepatan inferensi.
 
-![Gambar 3.2 Desain Eksperimen Penelitian](gambar_laporan/desain_eksperimen.png)
+<img width="2780" height="1379" alt="image" src="https://github.com/user-attachments/assets/79a0734c-cad1-4203-a46c-a3b98b956c33" />
 *Gambar 3.2 Desain Eksperimen Penelitian*
-
-
 
 ### 3.2 Dataset dan Pengumpulan Data
 
@@ -437,7 +435,7 @@ Prosedur penelitian dilaksanakan melalui tahapan berikut:
 7. **Inferensi dan Counting** — Melakukan inferensi *batch* pada *test set*, analisis *per-density*, dan konversi ONNX (Notebook 04).
 8. **Analisis dan Penarikan Kesimpulan** — Menginterpretasi hasil dan menarik kesimpulan.
 
-![Gambar 3.1 Diagram Alur Penelitian](gambar_laporan/flowchart_alur_penelitian.png)
+<img width="1580" height="2779" alt="image" src="https://github.com/user-attachments/assets/a5ecb362-d294-439c-8a42-0b0f0cc1371e" />
 *Gambar 3.1 Diagram Alur Penelitian*
 
 
