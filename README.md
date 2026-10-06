@@ -13,6 +13,118 @@ SEMARANG
 
 ---
 
+
+# HALAMAN PERSETUJUAN
+
+Laporan Tugas Akhir dengan judul:
+
+**OPTIMASI SISTEM VISUAL COUNTING OBJEK MIKRO BERDEMPETAN MENGGUNAKAN ARSITEKTUR YOLO-OBB DAN DETEKSI RESOLUSI TINGGI BERBASIS ONNX**
+
+Yang dipersiapkan dan disusun oleh:
+
+**Faishal Anwar**
+
+Telah disetujui oleh Dosen Pembimbing untuk dipertahankan di hadapan Dewan Penguji.
+
+Semarang, [Tanggal Persetujuan]
+
+**Dosen Pembimbing I**  
+*(Tanda Tangan)*  
+**[Nama Dosen Pembimbing I beserta gelar]**  
+NIDN: [NIDN Dosen I]
+
+**Dosen Pembimbing II**  
+*(Tanda Tangan)*  
+**[Nama Dosen Pembimbing II beserta gelar]**  
+NIDN: [NIDN Dosen II]
+
+---
+
+# HALAMAN PENGESAHAN
+
+Laporan Tugas Akhir dengan judul:
+
+**OPTIMASI SISTEM VISUAL COUNTING OBJEK MIKRO BERDEMPETAN MENGGUNAKAN ARSITEKTUR YOLO-OBB DAN DETEKSI RESOLUSI TINGGI BERBASIS ONNX**
+
+Yang dipersiapkan dan disusun oleh:
+
+**Faishal Anwar**
+
+Telah dipertahankan di hadapan Dewan Penguji pada tanggal [Tanggal Ujian] dan dinyatakan telah memenuhi syarat untuk diterima.
+
+**Susunan Dewan Penguji:**
+
+**Ketua Penguji**  
+*(Tanda Tangan)*  
+**[Nama Ketua Penguji beserta gelar]**  
+NIDN: [NIDN Penguji]
+
+**Anggota Penguji I**  
+*(Tanda Tangan)*  
+**[Nama Penguji I beserta gelar]**  
+NIDN: [NIDN Penguji I]
+
+**Anggota Penguji II**  
+*(Tanda Tangan)*  
+**[Nama Penguji II beserta gelar]**  
+NIDN: [NIDN Penguji II]
+
+Mengetahui,  
+Dekan Fakultas Teknologi Industri  
+Universitas Islam Sultan Agung
+
+*(Tanda Tangan dan Stempel)*
+
+**[Nama Dekan beserta gelar]**  
+NIDN: [NIDN Dekan]
+
+---
+
+# PERNYATAAN KEASLIAN
+
+Dengan ini saya menyatakan bahwa Laporan Tugas Akhir dengan judul **"Optimasi Sistem Visual Counting Objek Mikro Berdempetan Menggunakan Arsitektur YOLO-OBB dan Deteksi Resolusi Tinggi Berbasis ONNX"** adalah murni hasil karya saya sendiri.
+
+Di dalam laporan ini tidak terdapat karya yang pernah diajukan untuk memperoleh gelar kesarjanaan di suatu Perguruan Tinggi, dan sepanjang pengetahuan saya juga tidak terdapat karya atau pendapat yang pernah ditulis atau diterbitkan oleh orang lain, kecuali yang secara tertulis diacu dalam naskah ini dan disebutkan dalam Daftar Pustaka.
+
+Apabila di kemudian hari terbukti atau dapat dibuktikan bahwa sebagian atau keseluruhan isi dari Laporan Tugas Akhir ini adalah hasil plagiasi, saya bersedia menerima sanksi atas perbuatan tersebut sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.
+
+Semarang, [Tanggal Pernyataan]
+
+Yang Menyatakan,
+
+*(Meterai Rp 10.000 & Tanda Tangan)*
+
+**Faishal Anwar**
+
+---
+
+# KATA PENGANTAR
+
+Puji syukur kehadirat Allah SWT atas segala rahmat, hidayah, dan karunia-Nya sehingga penulis dapat menyelesaikan Laporan Tugas Akhir yang berjudul **"Optimasi Sistem Visual Counting Objek Mikro Berdempetan Menggunakan Arsitektur YOLO-OBB dan Deteksi Resolusi Tinggi Berbasis ONNX"**. Penulisan Tugas Akhir ini diajukan sebagai salah satu syarat untuk memperoleh gelar Sarjana Komputer (S.Kom.) pada Program Studi Teknik Informatika, Fakultas Teknologi Industri, Universitas Islam Sultan Agung Semarang.
+
+Dalam penyusunan Tugas Akhir ini, penulis menyadari bahwa banyak pihak yang telah memberikan bantuan, bimbingan, serta dorongan moral. Oleh karena itu, penulis ingin mengucapkan terima kasih yang sebesar-besarnya kepada:
+
+1. Bapak Dekan Fakultas Teknologi Industri, Universitas Islam Sultan Agung.
+2. Bapak/Ibu Ketua Program Studi Teknik Informatika atas segala dukungan akademik yang diberikan.
+3. Bapak dan Ibu Dosen Pembimbing atas arahan, bimbingan, kesabaran, dan waktu yang diluangkan selama proses pengerjaan Tugas Akhir ini.
+4. Pihak PT Nihon Seiki Indonesia atas izin pengambilan data *micro-part* dan dukungannya dalam pelaksanaan penelitian lapangan.
+5. Kedua orang tua dan keluarga tercinta atas segala doa, kasih sayang, dan dukungan moral maupun materiil yang tak terhingga.
+6. Seluruh pihak yang telah membantu secara langsung maupun tidak langsung yang tidak dapat penulis sebutkan satu per satu.
+
+Penulis menyadari sepenuhnya bahwa Laporan Tugas Akhir ini masih jauh dari kata sempurna karena keterbatasan pengetahuan dan pengalaman. Oleh karena itu, penulis sangat mengharapkan kritik dan saran yang membangun dari semua pihak demi perbaikan dan pengembangan penelitian selanjutnya. Semoga Laporan Tugas Akhir ini dapat memberikan manfaat bagi ilmu pengetahuan, khususnya di bidang *Computer Vision* dan aplikasinya pada industri manufaktur.
+
+Semarang, 2026
+
+**Penulis**
+
+---
+
+## DAFTAR ISI
+
+(Daftar Isi akan dihasilkan secara otomatis (TOC) pada Microsoft Word)
+
+---
+
 ## ABSTRAK
 
 Proses penghitungan komponen mikro (*micro-part*) di lini manufaktur presisi masih menghadapi tantangan signifikan akibat fenomena oklusi dan tumpang tindih objek di dalam wadah penampungan. Pendekatan deteksi objek konvensional berbasis *Horizontal Bounding Box* (HBB) terbukti gagal menangani kondisi ini karena algoritma *Non-Maximum Suppression* (NMS) cenderung menyatukan kotak deteksi yang saling bersinggungan, sehingga menghasilkan kesalahan penghitungan yang tinggi. Penelitian ini mengusulkan optimasi sistem *visual counting* menggunakan arsitektur YOLO dengan representasi *Oriented Bounding Box* (OBB) serta modifikasi *detection head* P2 untuk meningkatkan kemampuan deteksi objek kecil berdempetan. Lima varian model dibandingkan secara komprehensif: YOLOv8n-OBB, YOLO11n-OBB, YOLO11n-OBB-P2 (modifikasi yang diusulkan), YOLO11s-OBB, dan YOLO11n-HBB sebagai *ablation study*. Dataset yang digunakan terdiri dari 1.000 citra komponen manufaktur mikro dari PT Nihon Seiki dengan pembagian 80:10:10 untuk *training*, *validation*, dan *testing*. Hasil eksperimen menunjukkan bahwa seluruh model OBB mencapai akurasi penghitungan di atas 99,40%, dengan YOLO11n-OBB-P2 meraih MAE terendah sebesar 0,25 dan jumlah parameter paling ringan (1,96M). Sebaliknya, model HBB mengalami kegagalan dengan MAE 1,67 dan akurasi penghitungan hanya 97,42%. Konversi model ke format ONNX berhasil dilakukan namun menunjukkan penurunan kecepatan pada lingkungan tanpa akselerasi GPU. Penelitian ini membuktikan secara empiris keunggulan representasi OBB dibandingkan HBB untuk kasus *visual counting* objek mikro berdempetan, serta efektivitas modifikasi *detection head* P2 dalam mengoptimasi deteksi objek berskala kecil dengan efisiensi parameter yang superior.
@@ -65,7 +177,40 @@ The counting process of micro-parts in precision manufacturing lines still faces
 
 ---
 
+
+## DAFTAR GAMBAR
+
+1. Gambar 2.1 Perbandingan HBB vs OBB
+2. Gambar 2.2 Arsitektur YOLO11 Standar vs P2 Head
+3. Gambar 3.1 Diagram Alur Penelitian
+4. Gambar 3.2 Desain Eksperimen Penelitian
+5. Gambar 4.1 Kurva Loss Training (5 Model)
+6. Gambar 4.2 Perbandingan Metrik Deteksi (mAP)
+7. Gambar 4.3 Radar Chart Evaluasi Komprehensif
+8. Gambar 4.4 Perbandingan Metrik Counting (MAE & Accuracy)
+9. Gambar 4.5 Distribusi Error Counting per Model
+10. Gambar 4.6 Scatter Plot Ground Truth vs Prediksi
+11. Gambar 4.7 MAE per Kategori Kepadatan (Density)
+12. Gambar 4.8 Visualisasi Perbandingan Prediksi
+13. Gambar 4.9 Perbandingan Kecepatan Inferensi
+14. Gambar 4.10 Pengaruh Confidence Threshold Terhadap Performa Counting
+
+## DAFTAR TABEL
+
+1. Tabel 3.1 Pembagian Dataset
+2. Tabel 3.2 Varian Model yang Dibandingkan
+3. Tabel 4.1 Hasil Pelatihan Seluruh Varian Model
+4. Tabel 4.2 Hasil Evaluasi Deteksi pada Test Set
+5. Tabel 4.3 Hasil Evaluasi Counting pada Test Set
+6. Tabel 4.4 Performa MAE Berdasarkan Tingkat Kepadatan Objek
+7. Tabel 4.5 Kecepatan Inferensi PyTorch vs ONNX
+8. Tabel 4.6 Perbandingan Ablation Study (HBB vs OBB)
+9. Tabel A.1 Ringkasan Akhir Semua Metrik Seluruh Model
+
+---
+
 ## BAB I PENDAHULUAN
+
 
 ### 1.1 Latar Belakang
 
@@ -252,6 +397,11 @@ Penelitian ini menggunakan pendekatan eksperimental komparatif dengan melakukan 
 3. **Evaluasi komprehensif** menggunakan metrik deteksi dan metrik *counting* pada *test set* yang identik.
 4. **Analisis komparatif** terhadap aspek akurasi, efisiensi parameter, dan kecepatan inferensi.
 
+![Gambar 3.2 Desain Eksperimen Penelitian](gambar_laporan/desain_eksperimen.png)
+*Gambar 3.2 Desain Eksperimen Penelitian*
+
+
+
 ### 3.2 Dataset dan Pengumpulan Data
 
 #### 3.2.1 Sumber Data
@@ -286,6 +436,11 @@ Prosedur penelitian dilaksanakan melalui tahapan berikut:
 6. **Evaluasi Komprehensif** — Mengevaluasi seluruh model pada *test set* menggunakan metrik deteksi dan *counting* (Notebook 03).
 7. **Inferensi dan Counting** — Melakukan inferensi *batch* pada *test set*, analisis *per-density*, dan konversi ONNX (Notebook 04).
 8. **Analisis dan Penarikan Kesimpulan** — Menginterpretasi hasil dan menarik kesimpulan.
+
+![Gambar 3.1 Diagram Alur Penelitian](gambar_laporan/flowchart_alur_penelitian.png)
+*Gambar 3.1 Diagram Alur Penelitian*
+
+
 
 
 ### 3.4 Model yang Dibandingkan
