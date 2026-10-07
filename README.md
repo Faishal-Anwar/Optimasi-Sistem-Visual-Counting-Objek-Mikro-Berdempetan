@@ -1,4 +1,4 @@
-<img width="5352" height="4125" alt="loss_curves_comparison" src="https://github.com/user-attachments/assets/76d204fe-90d2-446a-b9b3-12a2a1606d4a" /># OPTIMASI SISTEM VISUAL COUNTING OBJEK MIKRO BERDEMPETAN MENGGUNAKAN ARSITEKTUR YOLO-OBB DAN DETEKSI RESOLUSI TINGGI BERBASIS ONNX
+# OPTIMASI SISTEM VISUAL COUNTING OBJEK MIKRO BERDEMPETAN MENGGUNAKAN ARSITEKTUR YOLO-OBB DAN DETEKSI RESOLUSI TINGGI BERBASIS ONNX
 
 **LAPORAN TUGAS AKHIR**
 
@@ -321,6 +321,7 @@ Berdasarkan tinjauan pustaka di atas, dapat diidentifikasi bahwa belum ada studi
 - **Akurasi lokalisasi:** Representasi geometri yang lebih presisi meningkatkan kualitas deteksi secara keseluruhan.
 
 <img width="2961" height="1585" alt="Gambar_2_1_HBB_vs_OBB" src="https://github.com/user-attachments/assets/7e2fe20a-94a2-42fc-b062-08160ea8dbed" />
+
 *Gambar 2.1 Ilustrasi Perbandingan HBB vs OBB pada Objek Berdempetan*
 
 
@@ -353,6 +354,7 @@ Modifikasi *Detection Head* P2 menambahkan satu *head* deteksi tambahan pada ska
 Konsekuensi dari modifikasi ini adalah pengurangan jumlah total parameter karena lapisan P5 dihilangkan untuk mengalokasikan komputasi pada resolusi yang lebih tinggi. Hipotesisnya adalah bahwa untuk kasus objek mikro yang seluruhnya berukuran kecil, *head* P2 yang beresolusi tinggi lebih bermanfaat dibandingkan *head* P5 yang didesain untuk objek besar.
 
 <img width="956" height="345" alt="Gambar_2_2_Arsitektur_P2" src="https://github.com/user-attachments/assets/ff26541e-6ef8-48d1-8479-4492f2ddfde7" />
+
 *Gambar 2.2 Arsitektur YOLO11 Standar vs Modifikasi P2*
 
 
@@ -415,6 +417,7 @@ Penelitian ini menggunakan pendekatan eksperimental komparatif dengan melakukan 
 4. **Analisis komparatif** terhadap aspek akurasi, efisiensi parameter, dan kecepatan inferensi.
 
 <img width="559" height="352" alt="Gambar_3_2_Desain_Eksperimen" src="https://github.com/user-attachments/assets/a46e46be-d410-4409-b581-8c3861855b70" />
+
 *Gambar 3.1 Desain Eksperimen Penelitian*
 
 
@@ -435,6 +438,7 @@ Penelitian ini menggunakan pendekatan eksperimental komparatif dengan melakukan 
 Dataset yang digunakan dalam penelitian ini terdiri dari **1.000 citra** komponen manufaktur mikro (*micro-part*) yang diperoleh dari PT Nihon Seiki Indonesia. Citra diambil menggunakan kamera industri dengan resolusi tinggi dalam kondisi pencahayaan terkontrol pada lingkungan lini produksi. Setiap citra menampilkan komponen mikro logam yang tertumpuk di dalam wadah penampungan dengan tingkat kepadatan yang bervariasi.
 
 <img width="2304" height="1728" alt="IMG_20260602_101714_363_jpg rf ouYfFLHOPHLxIBfxUNDL" src="https://github.com/user-attachments/assets/c3f9992b-8dd7-44d3-ab47-fd27b25b9e70" />
+
 *Gambar 3.2 Contoh Citra Dataset dari Lini Produksi*
 
 
@@ -453,6 +457,7 @@ Dataset yang digunakan dalam penelitian ini terdiri dari **1.000 citra** kompone
 Anotasi dilakukan secara manual menggunakan format *Oriented Bounding Box* (OBB) dengan representasi poligon empat titik. Untuk model HBB, anotasi dikonversi secara otomatis dari format OBB ke format *axis-aligned bounding box*. Seluruh anotasi mencakup satu kelas objek (*single-class*): "part".
 
 <img width="868" height="653" alt="Screenshot From 2026-10-07 02-50-55" src="https://github.com/user-attachments/assets/c8c336d2-bb3b-46ea-b88d-2a8cfdaf3fe8" />
+
 *Gambar 3.3 Contoh Proses Anotasi dengan Format OBB*
 
 
@@ -492,6 +497,7 @@ Prosedur penelitian dilaksanakan melalui tahapan berikut:
 8. **Analisis dan Penarikan Kesimpulan** — Menginterpretasi hasil dan menarik kesimpulan.
 
 <img width="403" height="768" alt="Gambar_3_1_Flowchart" src="https://github.com/user-attachments/assets/60e3d091-b7d6-4cb6-b7ce-67f0daa04915" />
+
 *Gambar 3.4 Diagram Alur Penelitian*
 
 
@@ -599,6 +605,7 @@ Dari Tabel 4.1 dapat diamati bahwa:
 - Model HBB menunjukkan mAP@0.5:0.95 yang secara signifikan lebih rendah (0,7813) dibandingkan model-model OBB (>0,93), mengindikasikan kelemahan lokalisasi pada *threshold* IoU yang lebih ketat.
 
 <img width="5352" height="4125" alt="loss_curves_comparison" src="https://github.com/user-attachments/assets/89577043-65ff-4779-a946-196327e51a5e" />
+
 *Gambar 4.1 Kurva Loss Training (5 Model)*
 
 
@@ -636,12 +643,15 @@ Evaluasi dilakukan pada 100 citra *test set* yang tidak pernah dilihat selama pe
 4. **F1-Score:** Konsisten dengan metrik lainnya, model-model OBB memiliki F1-Score ≥0,9985, sedangkan HBB sebesar 0,9978.
 
 <img width="1851" height="1651" alt="Gambar_4_2_PR_Curve" src="https://github.com/user-attachments/assets/ecfa379e-761f-4316-8310-2bbeba7d422d" />
+
 *Gambar 4.2 Kurva F1-Score dan Precision-Recall (PR) Curve*
 
 <img width="2345" height="1358" alt="Gambar_4_3_mAP" src="https://github.com/user-attachments/assets/5c3f64c9-cfde-4218-b562-e1938848dd06" />
+
 *Gambar 4.3 Perbandingan Metrik Deteksi (mAP)*
 
 <img width="2338" height="1907" alt="Gambar_4_4_Radar" src="https://github.com/user-attachments/assets/eaef0c86-482c-4932-b440-92cb7a0ef8b5" />
+
 *Gambar 4.4 Radar Chart Evaluasi Komprehensif*
 
 
@@ -677,9 +687,11 @@ Tabel 4.3 menyajikan hasil evaluasi kemampuan *visual counting* seluruh model pa
 4. **R² (Koefisien Determinasi):** Seluruh model memiliki R² mendekati 1,0, menunjukkan korelasi yang sangat kuat antara prediksi dan *ground truth*. Namun, model HBB memiliki R² terendah (0,9989).
 
 <img width="2320" height="1358" alt="Gambar_4_5_MAE" src="https://github.com/user-attachments/assets/f62da80d-3254-4a93-ae41-da9fd3116f6d" />
+
 *Gambar 4.5 Perbandingan Metrik Counting (MAE & Accuracy)*
 
 <img width="2102" height="2155" alt="Gambar_4_6_Scatter" src="https://github.com/user-attachments/assets/c5a17f5c-fada-4fe1-918e-7583f778eed6" />
+
 *Gambar 4.6 Scatter Plot Ground Truth vs Prediksi*
 
 
@@ -708,9 +720,11 @@ Untuk memahami performa model pada berbagai tingkat kepadatan objek, analisis di
 3. **Konsistensi lintas kepadatan:** YOLO11n-OBB-P2 menunjukkan pola unik di mana MAE-nya pada kategori Dense (0,26) lebih rendah dari MAE-nya pada kategori Medium (0,21). Ini mengindikasikan bahwa *Head* P2 sangat efektif pada citra dengan banyak objek kecil yang saling berdekatan.
 
 <img width="2516" height="1589" alt="Gambar_4_7_Density" src="https://github.com/user-attachments/assets/7d524e88-f6b4-4c36-a9cb-646ed6a7fc60" />
+
 *Gambar 4.7 MAE per Kategori Kepadatan (Density)*
 
 <img width="2238" height="1383" alt="visual_comparison (3)" src="https://github.com/user-attachments/assets/1034b121-aef4-450b-ab7c-50fc84509e50" />
+
 *Gambar 4.8 Visualisasi Perbandingan Prediksi HBB vs OBB*
 
 
@@ -747,6 +761,7 @@ Analisis pengaruh *confidence threshold* terhadap performa *counting* dilakukan 
 4. **Robustness:** Model menunjukkan ketahanan yang baik terhadap variasi *threshold* pada rentang yang luas (0,15-0,70), yang merupakan indikator kualitas model yang baik.
 
 <img width="2304" height="1358" alt="Gambar_4_9_Threshold" src="https://github.com/user-attachments/assets/294b9506-9d1c-4c27-9980-80c3b76fb218" />
+
 *Gambar 4.9 Pengaruh Confidence Threshold Terhadap Performa Counting*
 
 
@@ -779,6 +794,7 @@ Seluruh model dikonversi ke format ONNX dan dilakukan perbandingan kecepatan inf
 4. **Implikasi:** Hasil ini menunjukkan bahwa konversi ONNX saja tidak menjamin percepatan inferensi tanpa akselerasi *hardware* yang sesuai (misalnya TensorRT pada GPU NVIDIA). Untuk *deployment* pada CPU, model yang ringan seperti YOLO11n-HBB tetap menjadi pilihan tercepat dari segi *latency* (133,30 ms pada ONNX).
 
 <img width="2501" height="1589" alt="Gambar_4_10_Kecepatan" src="https://github.com/user-attachments/assets/4034a54b-d068-4d00-a368-240d8f33a008" />
+
 *Gambar 4.10 Kecepatan Inferensi (PyTorch vs ONNX)*
 
 
